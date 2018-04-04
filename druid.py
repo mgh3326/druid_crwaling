@@ -43,11 +43,17 @@ def get_board(result, num):  # 결과값을 년도, 달별로 받기
     result += str(num)+','
     result += store_title.get_text()+','
     store_description = soup_data.find('div', attrs={'class': 'description'})
+    # if '<br/>' in store_description:
+    #     store_description=store_description.replace('<br/>','')
+    # print(str(store_description).replace('<br/>','').split('<div class="description">')[1].split('</div>')[0].strip())
+    # print(store_description)
+    # store_description=store_description.replace('<br/>','')
 
     # print(store_description.get_text().strip())  # 내용 출력
-    oh_description = store_description.get_text().strip()
+    # oh_description = store_description.get_text().strip()
     # oh_description.reaplce('\n','   ')
-    result += store_description.get_text().replace('\n', '   ').replace('\n', '   ').strip()+',' # 이렇게 해야 공백 다 지워지는거 같다.
+    result += str(store_description).replace('<br/>', '').split('<div class="description">')[1].split(
+        '</div>')[0].strip().replace('\n', ' ').replace(',', '\,')+','  # 이렇게 해야 공백 다 지워지는거 같다.
     # result += store_description.get_text().strip()+','
 
     store_createTime = soup_data.find('span', attrs={'class': 'createTime'})

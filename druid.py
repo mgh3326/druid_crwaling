@@ -26,7 +26,7 @@ def getLastNum():  # 결과값을 년도, 달별로 받기
         if _index == 1:
             return i.get_text()
         _index += 1
-
+    
 
 def get_board(result, num):  # 결과값을 년도, 달별로 받기
     my_url = "http://druid.kw.ac.kr/Board/Algorithm/%d" % (

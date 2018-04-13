@@ -71,7 +71,7 @@ for i in range(0, int(getLastNum())):
     print(i)
     out = get_board(out, i+1)
 # print(out)
-f = open("out_4_11.txt", 'w', encoding='utf-8')
+f = open("out_4_13.txt", 'w', encoding='utf-8')
 f.write(str(out))
 f.close()
 print("완료 되었습니다.")

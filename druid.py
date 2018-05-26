@@ -26,7 +26,7 @@ def getLastNum():  # 결과값을 년도, 달별로 받기
         if _index == 1:
             return i.get_text()
         _index += 1
-    
+
 
 def get_board(result, num):  # 결과값을 년도, 달별로 받기
     my_url = "http://druid.kw.ac.kr/Board/Algorithm/%d" % (
@@ -67,11 +67,12 @@ out = ""
 oh = ""
 # print(getLastNum())
 print("start")
-for i in range(0, int(getLastNum())):
+for i in range(330, int(getLastNum())):
     print(i)
     out = get_board(out, i+1)
 print(out)
-f = open("out_4_5.txt", 'w', encoding='utf-8')
+f = open("out_5_24.txt", 'w', encoding='utf-8')
 f.write(str(out))
 f.close()
+print(out)
 print("완료 되었습니다.")

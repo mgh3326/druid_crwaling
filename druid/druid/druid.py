@@ -68,7 +68,7 @@ out = ""
 oh = ""
 # print(getLastNum())
 print("start")
-for i in range(468, int(getLastNum())):
+for i in range(490, int(getLastNum())):
     print(i)
     out = get_board(out, i+1)
 #print(out)
